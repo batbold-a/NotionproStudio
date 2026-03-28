@@ -13,14 +13,14 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    title: "Small Business Bookkeeping Tracker | Google Sheets Template",
+    title: "Small Business Bookkeeping Tracker | Notion Template",
     price: "26,000 MNT",
     image: "https://placehold.co/600x500/E5A9A9/2D2D35?text=Bookkeeping\nTracker",
     isSale: false,
   },
   {
     id: 2,
-    title: "ADHD Planner & Tracker | Google Sheets Template",
+    title: "ADHD Planner & Tracker | Notion Template",
     price: "26,000 MNT",
     originalPrice: "55,000 MNT",
     image: "https://placehold.co/600x500/E5A9A9/2D2D35?text=ADHD\nPlanner",
@@ -36,7 +36,7 @@ const products: Product[] = [
   },
   {
     id: 4,
-    title: "Income & Expense Tracker | Google Sheets Template",
+    title: "Income & Expense Tracker | Notion Template",
     price: "26,000 MNT",
     originalPrice: "37,000 MNT",
     image: "https://placehold.co/600x500/E5A9A9/2D2D35?text=Expense\nTracker",
@@ -48,8 +48,14 @@ const Header = () => (
   <header className="sticky top-0 z-50 bg-[var(--color-page-bg)]/90 backdrop-blur-md border-b border-[#E5D5C5]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between items-center h-20">
-        <div className="flex items-center">
-          <span className="text-2xl font-bold text-[#2D2D35] tracking-tight">DigiTemplates</span>
+        <div className="flex items-center gap-3">
+          <img 
+            src="/logo.png" 
+            alt="NotionPro.Studio Logo" 
+            className="h-10 w-10 object-contain"
+            onError={(e) => { e.currentTarget.src = 'https://placehold.co/100x100/e2e8f0/1e293b?text=Logo' }}
+          />
+          <span className="text-2xl font-bold text-[#2D2D35] tracking-tight">NotionPro.Studio</span>
         </div>
         <nav className="hidden md:flex space-x-8">
           <a href="#" className="text-[#2D2D35] font-medium hover:text-[#8B8B95] transition-colors">Home</a>
@@ -80,7 +86,7 @@ const Hero = () => (
         Organize your life & <br className="hidden sm:block" /> business with ease
       </h1>
       <p className="text-lg text-[#6B6B75] max-w-2xl mx-auto mb-10 leading-relaxed">
-        Premium Google Sheets and Excel templates designed to save you time, boost productivity, and help you reach your goals effortlessly.
+        Premium Notion templates designed to save you time, boost productivity, and help you reach your goals effortlessly.
       </p>
       <button className="bg-[#2D2D35] text-white px-8 py-4 rounded-full font-medium hover:bg-[#3A3A42] transition-colors inline-flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200">
         Shop All Templates <ArrowRight size={18} />
@@ -205,9 +211,17 @@ const Footer = () => (
   <footer className="bg-[#2D2D35] text-[#FDF8F5] py-16">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
       <div>
-        <h3 className="text-2xl font-bold mb-6 tracking-tight">DigiTemplates</h3>
+        <div className="flex items-center gap-3 mb-6">
+          <img 
+            src="/logo.png" 
+            alt="NotionPro.Studio Logo" 
+            className="h-8 w-8 object-contain bg-white rounded-full p-0.5"
+            onError={(e) => { e.currentTarget.src = 'https://placehold.co/100x100/e2e8f0/1e293b?text=Logo' }}
+          />
+          <h3 className="text-2xl font-bold tracking-tight">NotionPro.Studio</h3>
+        </div>
         <p className="text-[#8B8B95] text-sm leading-relaxed">
-          Beautiful, functional spreadsheets and templates for your everyday personal and business needs.
+          Beautiful, functional Notion templates for your everyday personal and business needs.
         </p>
       </div>
       <div>
@@ -244,7 +258,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-[#3A3A42] flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#8B8B95]">
-      <p>&copy; 2026 DigiTemplates. All rights reserved.</p>
+      <p>&copy; 2026 NotionPro.Studio. All rights reserved.</p>
       <div className="flex gap-6">
         <a href="#" className="hover:text-white transition-colors">Instagram</a>
         <a href="#" className="hover:text-white transition-colors">TikTok</a>
